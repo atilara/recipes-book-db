@@ -10,7 +10,7 @@ services:
         - 27017:27017
     volumes:
         - ./scripts/insert-data-mongo.js:/docker-entrypoint-initdb.d/insert-data-mongo.js:ro
-        - ./data/cleaned_indian_food_dataset.csv:/tmp/data/cleaned_indian_food_dataset.csv:ro
+        - ./neo4j/cleaned_indian_food_dataset.csv:/tmp/data/cleaned_indian_food_dataset.csv:ro
         - ./scripts/insert-recipes-mongo.sh:/docker-entrypoint-initdb.d/insert-recipes-mongo.sh:ro
   mongo-express:
     image: mongo-express:latest

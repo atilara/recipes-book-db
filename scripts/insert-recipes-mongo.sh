@@ -1,5 +1,6 @@
 mongoimport \
    --collection='recipes' \
-   --file='/tmp/data/reduced_recipes_ingredients.csv' \
+   --file='/tmp/data/cleaned_indian_food_dataset.csv' \
    --type=csv \
-   --fields="name","description","ingredients","ingredients_raw","steps","servings","serving_size","tags"
+   --fields="TranslatedRecipeName","TranslatedIngredients","TotalTimeInMins","Cuisine","TranslatedInstructions","Cleaned-Ingredients","Ingredient-count" \
+   --uri="mongodb://root:root@localhost:27017/recipes-book?authSource=admin"

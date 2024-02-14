@@ -3,15 +3,16 @@ services:
     image: mongo:latest
     restart: no
     environment:
-        MONGO_INITDB_ROOT_USERNAME: root
-        MONGO_INITDB_ROOT_PASSWORD: root
-        MONGO_INITDB_DATABASE: recipes-book
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: recipes-book
     ports:
-        - 27017:27017
+      - 27017:27017
     volumes:
-        - ./scripts/insert-data-mongo.js:/docker-entrypoint-initdb.d/insert-data-mongo.js:ro
-        - ./neo4j/cleaned_indian_food_dataset.csv:/tmp/data/cleaned_indian_food_dataset.csv:ro
-        - ./scripts/insert-recipes-mongo.sh:/docker-entrypoint-initdb.d/insert-recipes-mongo.sh:ro
+      - ./scripts/insert-data-mongo.js:/docker-entrypoint-initdb.d/insert-data-mongo.js:ro
+      - ./data/cleaned_indian_food_dataset.csv:/tmp/data/cleaned_indian_food_dataset.csv:ro
+      - ./scripts/insert-recipes-mongo.sh:/docker-entrypoint-initdb.d/insert-recipes-mongo.sh:ro
+
   mongo-express:
     image: mongo-express:latest
     restart: no
@@ -37,7 +38,9 @@ services:
     volumes:
       - ./scripts/mariadb-init.sql:/docker-entrypoint-initdb.d/mariadb-init.sql:ro
   neo4j:
-    build: neo4j
+    build:
+      context: .
+      dockerfile: Dockerfile.neo4j
     restart: no
     environment:
       ROOT_PASS: root

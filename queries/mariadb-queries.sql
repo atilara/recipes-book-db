@@ -1,9 +1,6 @@
 # QUAIS RECEITAS O USUARIO FAVORITOU ?
 
 SELECT
-    users.id as user_id,
-    users.username,
-    users.email,
     favorites.recipe_id
 FROM
     users
@@ -18,8 +15,7 @@ WHERE
 SELECT
     users.id as user_id,
     users.username,
-    users.email,
-    favorites.recipe_id
+    users.email
 FROM
     users
 JOIN

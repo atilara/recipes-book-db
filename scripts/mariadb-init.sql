@@ -29,16 +29,16 @@ CREATE TABLE favorites (
 );
 
 INSERT INTO favorites (user_id, recipe_id) VALUES
-    ('c96ac389-caa9-11ee-885d-18c04df2b611', 'id_da_receita1'),
-    ('c96adc15-caa9-11ee-885d-18c04df2b611', 'id_da_receita2'),
-    ('c96adc15-caa9-11ee-885d-18c04df2b611', 'id_da_receita3'),
-    ('c96adca1-caa9-11ee-885d-18c04df2b611', 'id_da_receita4'),
-    ('c96adcd8-caa9-11ee-885d-18c04df2b611', 'id_da_receita5'),
-    ('c96add07-caa9-11ee-885d-18c04df2b611', 'id_da_receita6'),
-    ('c96add36-caa9-11ee-885d-18c04df2b611', 'id_da_receita7'),
-    ('c96add64-caa9-11ee-885d-18c04df2b611', 'id_da_receita8'),
-    ('c96addbd-caa9-11ee-885d-18c04df2b611', 'id_da_receita9'),
-    ('c96ade90-caa9-11ee-885d-18c04df2b611', 'id_da_receita10');
+    ('c96ac389-caa9-11ee-885d-18c04df2b611', 'd38b17ff-849b-4a84-adfa-f860ffb849c7'),
+    ('c96adc15-caa9-11ee-885d-18c04df2b611', '7ef42ddf-e777-4241-bdc5-289653510892'),
+    ('c96adc15-caa9-11ee-885d-18c04df2b611', '73bf1610-6b50-4728-8e49-161790f0a542'),
+    ('c96adca1-caa9-11ee-885d-18c04df2b611', '148afc68-66c8-4684-80ad-b956d486886d'),
+    ('c96adcd8-caa9-11ee-885d-18c04df2b611', '1971afee-6b10-4b59-99a5-fc99e9c4063b'),
+    ('c96add07-caa9-11ee-885d-18c04df2b611', '77e39e78-6495-4a51-a459-d3c7b59ab64c'),
+    ('c96add36-caa9-11ee-885d-18c04df2b611', '93cf91d6-066c-45e4-807e-80b03e055f0d'),
+    ('c96add64-caa9-11ee-885d-18c04df2b611', '66e61def-9833-41fc-a436-01fda1439f0e'),
+    ('c96addbd-caa9-11ee-885d-18c04df2b611', '44920a43-8d3b-4bfd-a430-f2f291298cf5'),
+    ('c96ade90-caa9-11ee-885d-18c04df2b611', '8e12607e-d179-485e-a5a5-b5711507ea8e');
     
 CREATE TABLE search_logs (
     id VARCHAR(36) DEFAULT UUID() PRIMARY KEY,
@@ -50,13 +50,13 @@ CREATE TABLE search_logs (
 );
 
 INSERT INTO search_logs (user_id, search_type, value) VALUES
-    ('c96ac389-caa9-11ee-885d-18c04df2b611', 'recipe', 'Lasanha;Pizza;Bolo de Chocolate'),
-    ('c96adc15-caa9-11ee-885d-18c04df2b611', 'ingredients', 'Tomate;Queijo;Massa'),
-    ('c96adc15-caa9-11ee-885d-18c04df2b611', 'recipe', 'Salada Caesar;Sopa de Abóbora'),
-    ('c96adca1-caa9-11ee-885d-18c04df2b611', 'ingredients', 'Alface;Frango;Abóbora'),
-    ('c96adcd8-caa9-11ee-885d-18c04df2b611', 'recipe', 'Churrasco;Peixe Grelhado'),
-    ('c96add07-caa9-11ee-885d-18c04df2b611', 'ingredients', 'Carne;Peixe;Legumes'),
-    ('c96add36-caa9-11ee-885d-18c04df2b611', 'recipe', 'Camarão ao Alho e Óleo;Risoto de Cogumelos'),
-    ('c96add64-caa9-11ee-885d-18c04df2b611', 'ingredients', 'Camarão;Arroz;Cogumelos'),
-    ('c96addbd-caa9-11ee-885d-18c04df2b611', 'recipe', 'Macarrão à Carbonara;Salada de Frutas'),
-    ('c96ade90-caa9-11ee-885d-18c04df2b611', 'ingredients', 'Macarrão;Ovos;Bacon');
+    ('c96ac389-caa9-11ee-885d-18c04df2b611', 'recipe', 'Ragi Semiya Upma Recipe - Ragi Millet Vermicelli Breakfast'),
+    ('c96adc15-caa9-11ee-885d-18c04df2b611', 'ingredients', 'salt;rice vermicelli noodles (thin);asafoetida (hing);mustard seeds'),
+    ('c96adc15-caa9-11ee-885d-18c04df2b611', 'recipe', 'Gongura Chicken Curry Recipe - Andhra Style Gongura Chicken'),
+    ('c96adca1-caa9-11ee-885d-18c04df2b611', 'ingredients', 'tomato;salt;ginger'),
+    ('c96adcd8-caa9-11ee-885d-18c04df2b611', 'recipe', 'Mexican Style Black Bean Burrito Recipe'),
+    ('c96add07-caa9-11ee-885d-18c04df2b611', 'ingredients', 'tomato;spring onion'),
+    ('c96add36-caa9-11ee-885d-18c04df2b611', 'recipe', 'Andhra Style Alam Pachadi Recipe - Adrak Chutney (Recipe)'),
+    ('c96add64-caa9-11ee-885d-18c04df2b611', 'ingredients', 'red chillies;curry'),
+    ('c96addbd-caa9-11ee-885d-18c04df2b611', 'recipe', 'Udupi Style Ash Gourd Coconut Curry Recipe'),
+    ('c96ade90-caa9-11ee-885d-18c04df2b611', 'ingredients', 'tamarind water;coconut;mustard seeds;jaggery');

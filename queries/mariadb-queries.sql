@@ -21,7 +21,7 @@ FROM
 JOIN
     favorites ON users.id = favorites.user_id
 WHERE
-    favorites.recipe_id= 'id_da_receita1';
+    favorites.recipe_id= 'd38b17ff-849b-4a84-adfa-f860ffb849c7';
 
 #==================================================================================================================================================================
 # QUANTOS FAVS ESTA RECEITA POSSUI ?
@@ -31,7 +31,7 @@ SELECT
 FROM
     favorites
 WHERE
-    favorites.recipe_id= 'id_da_receita1';
+    favorites.recipe_id= 'd38b17ff-849b-4a84-adfa-f860ffb849c7';
 
 #==================================================================================================================================================================
 # QUAIS RECEITAS MAIS FAVORITADAS PELOS USUARIOS ?

@@ -1,3 +1,4 @@
+import uuid
 import pandas as pd
 import json
 
@@ -11,11 +12,11 @@ def get_unique_ingredients(csv_file):
     # Iteração sobre cada linha do dataframe
     for index, row in df.iterrows():
         # Dividir a string em itens separados por vírgula e adicionar ao conjunto
-        items = row['Cleaned-Ingredients'].split(',')
+        items = row['processed_ingredients'].split(',')
         unique_items.update(items)
     
     # Criar uma lista de objetos JSON com os itens únicos
-    json_objects = [{'name': item.strip()} for item in unique_items]
+    json_objects = [{'uuid': str(uuid.uuid4()),'name': item.strip()} for item in unique_items]
     
     return json_objects
 

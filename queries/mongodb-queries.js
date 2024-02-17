@@ -1,3 +1,12 @@
+// Quais receitas relacionadas ao buscar por x palavra ou frase
+
+db.recipes.find({
+  $or: [
+    { recipe_name: { $regex: new RegExp("style", "i") } },
+    { instructions: { $regex: new RegExp("style", "i") } },
+  ],
+});
+
 // Quais pratos da culinária x temos no livro de receita?
 
 db.recipes.find({

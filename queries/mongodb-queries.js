@@ -43,14 +43,6 @@ db.recipes.find(
   }
 );
 
-// Quais pratos posso preparar com menos de x ingredientes?
-
-db.recipes.find({ ingredients_number: { $lt: 4 } });
-
-// Quais pratos posso preparar em menos de x minutos e com menos de y ingredientes?
-
-db.recipes.find({ time_minutes: { $lt: 20 }, ingredients_number: { $lt: 8 } });
-
 // Quais foram os pratos favoritados pelo usuário x?
 // [Recebe array de IDs recebidos pelo MariaDB, caso a aplicação estivesse em execução]
 

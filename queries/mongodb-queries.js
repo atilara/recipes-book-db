@@ -13,14 +13,6 @@ db.recipes.find({
   cuisine: "South Indian Recipes",
 });
 
-// Quais pratos posso preparar em menos de x minutos?
-
-db.recipes.find({
-  time_minutes: { $lt: 20 },
-});
-
-db.recipes.find({ time_minutes: { $gte: 10, $lte: 20 } }); //range
-
 // Como preparo uma receita x?
 
 db.recipes.find(

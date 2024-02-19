@@ -34,6 +34,15 @@ db.recipes.find(
 
 // Quais ingredientes são necessários para preparar um prato x?
 
+db.recipes.find(
+  {
+    uuid: "77e39e78-6495-4a51-a459-d3c7b59ab64c",
+  },
+  {
+    ingredients: 1
+  }
+);
+
 // Quais pratos posso preparar com menos de x ingredientes?
 
 db.recipes.find({ ingredients_number: { $lt: 4 } });

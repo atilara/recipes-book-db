@@ -51,5 +51,15 @@ return r,rel,num
 limit 10;
 
 //Quais pratos posso preparar com os ingredientes [x,y,z] e sem os ingredientes [u,v,w]?
+MATCH (r:Recipe)-[rel:HAS_INGREDIENT]->(i:Ingredient)
+with r, collect(i.name) as ing_list
+where all(name in ['salt', 'cumin seeds', 'tomato'] where name in ing_list) and none(name in ['oil','onion'] where name in ing_list)
+return r
+limit 10;
 
 //Quais pratos posso preparar da culinária C sem os ingredientes [x,y,z]?
+MATCH (c:Cuisine)<-[:FROM_CUISINE]-(r:Recipe)-[rel:HAS_INGREDIENT]->(i:Ingredient)
+with r, c, collect(i.name) as ing_list
+where none(name in ['oil','onion'] where name in ing_list) and c.cuisine = 'Indian'
+return r
+limit 10;

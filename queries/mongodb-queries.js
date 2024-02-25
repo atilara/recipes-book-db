@@ -50,14 +50,3 @@ db.recipes.find({
     ],
   },
 });
-
-// Dados que precisam ser gerados aleatoriamente:
-// Custo de preparo de um prato
-// Calorias
-// Dificuldade
-
-// Quais pratos posso preparar com menos de x reais?
-
-// Quais pratos posso preparar com menos de x calorias e menos de x reais?
-
-// Quais pratos posso preparar facilmente?
